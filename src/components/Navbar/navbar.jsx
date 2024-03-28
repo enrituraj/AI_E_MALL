@@ -1,28 +1,63 @@
+"use client";
+
 import Link from 'next/link'
-import React from 'react'
+import { FaShoppingCart } from "react-icons/fa";
+import { TiHome } from "react-icons/ti";
+import { BiCategory } from "react-icons/bi";
+import { FaFireAlt } from "react-icons/fa";
+import { CiLocationArrow1 } from "react-icons/ci";
 
 const Navbar = () => {
+
+
   return (
     <>
       <nav className="p-5 bg-gray-100 ">
         <div className="container flex justify-between items-center">
-        <Link href='/' className="font-semibold text-xl">
-          E-MAll
-        </Link>
-        <ul className='flex items-center gap-8'>
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/category">Category</Link></li>
-          <li><Link href="/new_arrival">New Arrival</Link></li>
-          <li><Link href="/trending">Trending</Link></li>
-        </ul>
-        <div className="">
-          <Link href='/cart'>My Cart</Link>
-          <Link className=" rounded-lg text-sm font-semibold py-2.5 px-4 bg-slate-900 text-white hover:bg-slate-700 -my-2.5 ml-8" href="/login">
-            <span>Login</span>          
+          <Link href='/' className="font-semibold text-xl">
+            E-MAll
           </Link>
+
+          <ul className='hidden md:flex items-center gap-8'>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/category">Category</Link></li>
+            <li><Link href="/new_arrival">New Arrival</Link></li>
+            <li><Link href="/trending">Trending</Link></li>
+          </ul>
+
+          {/* mobile nav  */}
+          <ul className='fixed z-10 flex items-center bottom-0 bg-slate-300 w-full p-4 left-0 md:hidden gap-8'>
+            <li className="flex-1 "><Link className='block py-2 my-1' href="/">
+            <TiHome className='text-2xl m-auto bg-slate-400 hover:bg-slate-800' />
+            <span className='text-sm text-center'>Home</span>
+              </Link></li>
+            <li className="flex-1"><Link className='block py-2 my-1' href="/category">
+              <BiCategory/>
+              <span>Category</span>
+              </Link></li>
+            <li className="flex-1"><Link className='block py-2 my-1' href="/new_arrival">
+            <CiLocationArrow1 />
+              <span>New Arrival</span>
+              </Link></li>
+            <li className="flex-1"><Link className='block py-2 my-1' href="/trending">
+              <FaFireAlt/>
+              <span>Trending</span>
+              </Link></li>
+          </ul>
+
+          <div className="flex items-center ">
+            <Link href='/cart' className='relative'>
+              <FaShoppingCart className='text-2xl text-gray-600' />
+              <p className='absolute -top-4 -right-4 px-2 py-1 text-sm bg-red-400 text-white rounded-full '>5</p>
+            </Link>
+          
+
+            <Link className="hidden md:block rounded-lg text-sm font-semibold py-2.5 px-4 bg-slate-900 text-white hover:bg-slate-700 -my-2.5 ml-8" href="/login">
+              <span>Login</span>
+            </Link>
+          </div>
         </div>
-        </div>
-        
+
       </nav>
     </>
   )

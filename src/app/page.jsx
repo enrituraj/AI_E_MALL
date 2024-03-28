@@ -1,5 +1,6 @@
 import Link from "next/link";
-
+import Category from "./category/page";
+import Product_card from "../components/Product_Card/product_card"
 // `app/page.js` is the UI for the `/` URL
 export default function Page() {
   return (
@@ -19,27 +20,8 @@ export default function Page() {
           </h1>
           <Link href="/category">View All</Link>
         </div>
-        <div className="p-10">
-          <div className="grid grid-cols-6 gap-8">
-            <div className="bg-red-200 p-20">
-              <h1>1</h1>
-            </div>
-            <div className="bg-red-200 p-20">
-              <h1>2</h1>
-            </div>
-            <div className="bg-red-200 p-20">
-              <h1>3</h1>
-            </div>
-            <div className="bg-red-200 p-20">
-              <h1>1</h1>
-            </div>
-            <div className="bg-red-200 p-20">
-              <h1>2</h1>
-            </div>
-            <div className="bg-red-200 p-20">
-              <h1>3</h1>
-            </div>
-          </div>
+        <div className="p-2">
+          <Category/>
         </div>
       </section>
 
@@ -86,32 +68,70 @@ export default function Page() {
           </h1>
           <Link href="/category">View All</Link>
         </div>
-        <div className="p-10">
-          <div className="grid grid-cols-4 gap-8">
-            <div className="bg-red-200 p-20">
-              <h1>1</h1>
-            </div>
-            <div className="bg-red-200 p-20">
-              <h1>1</h1>
-            </div>
-            <div className="bg-red-200 p-20">
-              <h1>1</h1>
-            </div>
-            <div className="bg-red-200 p-20">
-              <h1>1</h1>
-            </div>
-            <div className="bg-red-200 p-20">
-              <h1>1</h1>
-            </div>
-            <div className="bg-red-200 p-20">
-              <h1>1</h1>
-            </div>
-            <div className="bg-red-200 p-20">
-              <h1>1</h1>
-            </div>
-            <div className="bg-red-200 p-20">
-              <h1>1</h1>
-            </div>
+        <div className="p-5">
+          <div className="grid grid-cols-1 gap-8 my-5 md:grid-cols-4 sm:grid-cols-2">
+
+
+          <Product_card 
+            product_name="Airpod Max pro"
+            product_price="250"
+            sm_desc="A perfect balance of high quality audio"
+            rating="125"
+            btn_value="Add To Cart"
+          />
+
+          <Product_card 
+            product_name="Airpod Max pro"
+            product_price="250"
+            sm_desc="A perfect balance of high quality audio"
+            rating="125"
+            btn_value="Add To Cart"
+          />
+          <Product_card 
+            product_name="Airpod Max pro"
+            product_price="250"
+            sm_desc="A perfect balance of high quality audio"
+            rating="125"
+            btn_value="Add To Cart"
+          />
+          <Product_card 
+            product_name="Airpod Max pro"
+            product_price="250"
+            sm_desc="A perfect balance of high quality audio"
+            rating="125"
+            btn_value="Add To Cart"
+          />
+          
+          <Product_card 
+            product_name="Airpod Max pro"
+            product_price="250"
+            sm_desc="A perfect balance of high quality audio"
+            rating="125"
+            btn_value="Add To Cart"
+          />
+
+          <Product_card 
+            product_name="Airpod Max pro"
+            product_price="250"
+            sm_desc="A perfect balance of high quality audio"
+            rating="125"
+            btn_value="Add To Cart"
+          />
+          <Product_card 
+            product_name="Airpod Max pro"
+            product_price="250"
+            sm_desc="A perfect balance of high quality audio"
+            rating="125"
+            btn_value="Add To Cart"
+          />
+          <Product_card 
+            product_name="Airpod Max pro"
+            product_price="250"
+            sm_desc="A perfect balance of high quality audio"
+            rating="125"
+            btn_value="Add To Cart"
+          />
+          
           </div>
         </div>
       </section>
