@@ -1,11 +1,26 @@
+'use client';
 import Link from "next/link";
 import { FaGoogle } from "react-icons/fa";
 import { CiUser } from "react-icons/ci";
 import { CiLock } from "react-icons/ci";
 import { RxEyeOpen } from "react-icons/rx";
 import { TbEyeClosed } from "react-icons/tb";
+import { useState } from "react";
 
 export default function Login() {
+
+  const [passwordType,setPasswordType] = useState("password");
+  const [eyeOpen,setEyeOpen] = useState(false);
+  const showPassword = () =>{
+    if(passwordType == "password"){
+      setPasswordType("text");
+      setEyeOpen(true);
+    }else{
+      setPasswordType("password");
+      setEyeOpen(false);
+    }
+  }
+
   return (
     <>
       <div className="bg-gray-100 flex items-center justify-center h-[100vh]">
@@ -26,12 +41,13 @@ export default function Login() {
             <div className="relative mb-4 ">
               <CiLock className="absolute left-3 top-1/4 text-3xl font-bold text-slate-500" />
 
-              <input type="password" placeholder="Password"
+              <input type={passwordType} placeholder="Password"
                 className="p-3 px-12 w-full rounded text-lg border-2 border-solid border-slate-300 "
               />
-              
-              {/* <RxEyeOpen />
-              <TbEyeClosed /> */}
+              <div className="absolute top-1/4 right-3 text-2xl">
+                <RxEyeOpen className={eyeOpen ? "block":"hidden"} onClick={()=>showPassword()} />
+                <TbEyeClosed className={eyeOpen ? "hidden":"block"} onClick={()=>showPassword()} />
+              </div>
             </div>
 
 
@@ -53,7 +69,7 @@ export default function Login() {
           <hr className="h-1 my-4 border-slate-700"/>
 
           <p className="text-center">
-            Don't have an account ? 
+            Donot have an account ? 
             <Link href="#" className="font-semibold"> Create Account</Link>
           </p>
 

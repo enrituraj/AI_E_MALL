@@ -8,7 +8,7 @@ const Product_card = ({product_name,product_price,sm_desc,rating,btn_value}) => 
       
       <div className="my-4">
             <div className="relative rounded-lg w-full h-[250px] bg-gray-100 border border-solid border-slate-200 ">
-              <Image src={product_img} className="w-full h-full object-contain "></Image>
+              <Image src={product_img} alt={product_name} className="w-full h-full object-contain "></Image>
               <div className="absolute bg-slate-50 top-2 right-2 p-3 rounded-full border-2 border-solid border-slate-200 ">
                 <span>❤</span>
               </div>
