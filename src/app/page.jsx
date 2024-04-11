@@ -7,7 +7,7 @@ export default function Page() {
     <>
     <div className="container">
 
-      <div className="m-5 p-10 bg-slate-400">
+      <div className="mt-16 p-5 bg-slate-400">
         <h1>hi</h1>
       </div>
     </div>
@@ -20,7 +20,7 @@ export default function Page() {
           </h1>
           <Link href="/category">View All</Link>
         </div>
-        <div className="p-2">
+        <div className="p-0">
           <Category/>
         </div>
       </section>
@@ -35,11 +35,11 @@ export default function Page() {
           <Link href="/category">View All</Link>
         </div>
         <div className="p-10">
-          <div className="grid grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
             <div className="bg-red-200 p-20 col-span-2	">
               <h1>1</h1>
             </div>
-            <div className="grid grid-rows-2 gap-4" >
+            <div className="grid grid-rows-1 gap-4 md:grid-rows-2" >
 
             <div className="bg-red-200 p-20">
               <h1>2</h1>
@@ -48,7 +48,7 @@ export default function Page() {
               <h1>2</h1>
             </div>
             </div>
-            <div className="grid grid-rows-2 gap-4">
+            <div className="grid grid-rows-1 gap-4 md:grid-rows-2">
 
             <div className="bg-red-200 p-20">
               <h1>2</h1>
@@ -139,7 +139,7 @@ export default function Page() {
       <section className="mt-20 bg-slate-400 p-10 ">
 
         <div className="p-10">
-          <div className="grid grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
             <div className="bg-red-200 p-20">
               <h1>1</h1>
             </div>

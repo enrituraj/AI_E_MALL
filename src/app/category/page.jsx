@@ -10,7 +10,7 @@ import { GiShoppingCart } from "react-icons/gi";
 export default function Category() {
     return (
         <>
-        <div className="container">
+        <div className="container px-2 md:px-8">
 
           <div className="grid grid-cols-2 gap-8 my-5 md:grid-cols-6 sm:grid-cols-3">
             
